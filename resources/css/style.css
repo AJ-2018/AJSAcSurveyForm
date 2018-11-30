@@ -1,0 +1,98 @@
+/*   Universal Styles   */
+body{
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(153,204,102, 0.5);
+  font-family: "Roboto", "Open Sans", sans-serif;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  margin: 0;
+}
+
+#description{
+  margin: 0 0 1rem 0;
+  color: rgb(153,0,102);
+}
+
+
+/*    Form Section    */
+
+#survey-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 70rem;
+  background-image: linear-gradient(90deg, rgb(255,153,51), rgb(102,153,255));
+}
+
+
+.row{
+  display: flex;
+  width: 100%;
+}
+
+.label{
+  text-align: right;
+  width: 50%;
+  margin: 1.5rem 1rem;
+}
+
+.answer{
+  text-align: left;
+  width: 50%;
+  margin: 1.3rem 1rem;
+}
+
+#name,
+  #email,
+    #number{
+      width: 20rem;
+      padding: 0.5rem 0 0.5rem 0.5rem;
+    }
+
+select{
+  padding: 0.5rem;
+}
+
+.checkbox-options{
+  display: flex;
+  flex-direction: column;
+}
+
+
+#submit{
+  margin: 2rem;
+  padding: 0.8rem 0.6rem;
+  cursor: pointer;
+  background-image: linear-gradient(80deg, rgb(255, 255, 255), rgb(204,51,153));
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 12rem;
+}
+
+
+/*    Thankyou.html styles  */
+
+.container-body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 14.3rem;
+  background-image: linear-gradient(90deg, rgb(255,153,51), rgb(102,153,255));
+
+}
+
+.message{
+  padding: 4rem 8rem;
+  margin: 0 auto;
+  width: 50rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}

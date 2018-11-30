@@ -3,79 +3,121 @@
   <head>
     <meta charset="utf-8">
     <title>AJS Academy: Survey Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto" rel="stylesheet">
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <h1 id="title">Survey Form</h1>
     <p id="description">Let us know how we can improve AJS Academy</p>
-    <form id="survey-form">
+    <!--      Form Section        -->
+    <form id="survey-form" method="post" action="thankyou.html">
+      <!-- Name Section  -->
       <div class="row">
-        <label id="name-label" for="name">Name:</label>
-        <input id="name" type="text" placeholder="Enter your name" autofocus required>
-      </div>
-      <div class="row">
-        <label id="email-label" for="email">Email:</label>
-        <input id="email" type="email" placeholder="Enter your email" required>
-      </div>
-      <div class="row">
-        <label id="number-label" for="number">Age:</label>
-        <input id="number" type="number" min="14" max="102" placeholder="Age">
-      </div>
-      <div class="row">
-        <label for="dropdown">Which option best describes your current role?</label>
-        <select id="dropdown">
-          <option value="Select an option" disabled>Select an option</option>
-          <option value="Student">Student</option>
-          <option value="Full Time Job">Full Time Job</option>
-          <option value="Full Time Learner">Full Time Learner</option>
-          <option value="Prefer not to say">Prefer not to say</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-      <div class="row">
-        <fieldset>
-          <legend>How likely is that you would recommend AJS Academy to a friend?</legend>
-          <input type="radio" id="10" value="10" name="probability">
-          <label for="10">Definitely</label>
-          <input type="radio" id="5" value="5" name="probability">
-          <label for="5">Maybe</label>
-          <input type="radio" id="1" value="1" name="probability">
-          <label for="1">Not sure</label>
-        </fieldset>
-      </div>
-      <div class="row">
-        <label for="favorite">What do you like most in AJS Academy</label>
-        <select id="favorite">
-          <option value="Select an option" disabled selected>Select an option</option>
-          <option value="Challenges">Challenges</option>
-          <option value="Projects">Projects</option>
-          <option value="Community">Community</option>
-          <option value="Open Source">Open Source</option>
-        </select>
-      </div>
-      <div class="row">
-        <p>Things that should be improved in the future(Check all that apply):</p>
-        <div class="checkbox-options">
-          <input type="checkbox" value="1">Front-end Projects
-          <input type="checkbox" value="2">Back-end Projects
-          <input type="checkbox" value="3">Data Visualization
-          <input type="checkbox" value="4">Challenges
-          <input type="checkbox" value="5">Open Source Community
-          <input type="checkbox" value="6">Gitter help rooms
-          <input type="checkbox" value="7">Videos
-          <input type="checkbox" value="8">City Meetups
-          <input type="checkbox" value="9">Wiki
-          <input type="checkbox" value="10">Forum
-          <input type="checkbox" value="11">Additional Courses
+        <div class="label">
+          <label id="name-label" for="name">Name:</label>
+        </div>
+        <div class="answer">
+          <input id="name" type="text" placeholder="Enter your name" autofocus required>
         </div>
       </div>
+      <!-- Email section  -->
       <div class="row">
-        <label for="comment">Any Comments or Suggestions?</label>
-        <textarea id="comment" placeholder="Enter your comment here..."></textarea>
+        <div class="label">
+          <label id="email-label" for="email">Email:</label>
+        </div>
+        <div class="answer">
+          <input id="email" type="email" placeholder="Enter your email" required>
+        </div>
+      </div>
+      <!-- Age Section  -->
+      <div class="row">
+        <div class="label">
+          <label id="number-label" for="number">Age:</label>
+        </div>
+        <div class="answer">
+          <input id="number" type="number" min="14" max="102" placeholder="Age">
+        </div>
+      </div>
+      <!-- Role section  -->
+      <div class="row">
+        <div class="label">
+          <label for="dropdown">Which option best describes your current role?</label>
+        </div>
+        <div class="answer">
+          <select id="dropdown">
+            <option value="Select an option" disabled>Select an option</option>
+            <option value="Student">Student</option>
+            <option value="Full Time Job">Full Time Job</option>
+            <option value="Full Time Learner">Full Time Learner</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <!--  Recommend section  -->
+      <div class="row">
+        <div class="label">
+          <label>How likely is that you would recommend AJS Academy to a friend?</label>
+        </div>
+        <div class="answer">
+          <ul>
+            <li><input type="radio" id="10" value="10" name="probability">
+                <label for="10">Definitely</label></li>
+            <li><input type="radio" id="5" value="5" name="probability">
+                <label for="5">Maybe</label></li>
+            <li><input type="radio" id="1" value="1" name="probability">
+                <label for="1">Not sure</label></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Favorite section  -->
+      <div class="row">
+        <div class="label">
+          <label for="favorite">What do you like most in AJS Academy?</label>
+        </div>
+        <div class="answer">
+          <select id="favorite">
+            <option value="Select an option" disabled selected>Select an option</option>
+            <option value="Challenges">Challenges</option>
+            <option value="Projects">Projects</option>
+            <option value="Community">Community</option>
+            <option value="Open Source">Open Source</option>
+          </select>
+        </div>
+      </div>
+      <!--  Improve Section  -->
+      <div class="row">
+        <div class="label">
+          <p>Things that should be improved in the future(Check all that apply):</p>
+        </div>
+        <div class="answer">
+          <ul>
+            <li><input type="checkbox" value="1">Front-end Projects</li>
+            <li><input type="checkbox" value="2">Back-end Projects</li>
+            <li><input type="checkbox" value="3">Data Visualization</li>
+            <li><input type="checkbox" value="4">Challenges</li>
+            <li><input type="checkbox" value="5">Open Source Community</li>
+            <li><input type="checkbox" value="6">Gitter help rooms</li>
+            <li><input type="checkbox" value="7">Videos</li>
+            <li><input type="checkbox" value="8">City Meetups</li>
+            <li><input type="checkbox" value="9">Wiki</li>
+            <li><input type="checkbox" value="10">Forum</li>
+            <li><input type="checkbox" value="11">Additional Courses</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Comment Section  -->
+      <div class="row">
+        <div class="label">
+          <label for="comment">Any Comments or Suggestions?</label>
+        </div>
+        <div class="answer">
+          <textarea id="comment" rows="3" cols="35" placeholder="Enter your comment here..."></textarea>
+        </div>
       </div>
       <button type="submit" id="submit">Submit</button>
     </form>
-    <script src=" https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
     </script>
-
   </body>
 </html>
